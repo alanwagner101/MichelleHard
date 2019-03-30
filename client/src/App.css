@@ -1,1 +1,31 @@
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#mainCard {
+  height: 90vh;
+  background-image: url("./images/store-interior.jpg");
+  background-size: cover;
+}
+
+#mainOverlayCard {
+  height: 100%;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.61), #000000d2, black);
+  opacity: 0.6;
+  color: white;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+#title {
+  font-size: 90px;
+  font-weight: bolder;
+  opacity: 1;
+}
+
+#titleHeader {
+  font-size: 60px;
+  font-weight: bolder;
+  opacity: 1;
+}
 

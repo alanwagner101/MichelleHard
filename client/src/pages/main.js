@@ -7,16 +7,26 @@ import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, FormBtn } from "../components/Form";
 import { Card, CardBody } from "../components/Card";
-import { withRouter } from 'react-router-dom';
 
 
 class Main extends Component {
 
     render() {
         return (
-            <div>
-                <h1>hello</h1>
-            </div>
+            <Container fluid>
+                <Row>
+                    <Col size="md-12">
+                        <Card id="mainCard">
+                            <Card id="mainOverlayCard">
+                                <CardBody id="mainWordBox">
+                                    <h1 id="title">Michelle's</h1>
+                                    <h5 id="titleHeader">Quilting and Sewing Center</h5>
+                                </CardBody>
+                            </Card>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
         )
     }
 }
