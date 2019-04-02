@@ -17,6 +17,7 @@ body {
   color: white;
   text-align: center;
   padding-top: 20vh;
+  text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
 }
 
 #title {
