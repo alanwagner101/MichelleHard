@@ -1,0 +1,15 @@
+#footerCard {
+    width: 99vw;
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(185, 185, 185);
+}

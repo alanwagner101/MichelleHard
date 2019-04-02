@@ -6,11 +6,13 @@ body {
   height: 90vh;
   background-image: url("./images/store-interior.jpg");
   background-size: cover;
+  border: none;
+  box-shadow: 1px 1px 10px #000000;
 }
 
 #mainOverlayCard {
   height: 100%;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.61), #000000d2, black);
+	background-image: linear-gradient(to bottom right,#1b2127,#3a221d);
   opacity: 0.6;
   color: white;
   text-align: center;
@@ -29,3 +31,48 @@ body {
   opacity: 1;
 }
 
+#divider1 {
+  background-color: #00000000;
+  width: 40%;
+  margin-left: 15px;
+}
+
+.titleButtons {
+  color: black;
+  padding-top: 5px;
+  width: 90%;
+  box-shadow: 1px 1px 15px #f1eff1;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+}
+
+.titleButtons:hover {
+  box-shadow: 5px 5px 20px #000000;
+}
+
+#divider2 {
+  width: 40%;
+  margin-left: 29.5vw;
+  margin-top: 15px;
+}
+
+#storeFrontCard {
+  height: 65vh;
+  background-image: url("./images/store-front.JPG");
+  background-size: cover;
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#storeFrontWords {
+  background-color: #00000000;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.infoWords {
+  font-weight: bold;
+}
