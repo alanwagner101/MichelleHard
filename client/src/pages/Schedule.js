@@ -7,15 +7,21 @@ import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, FormBtn } from "../components/Form";
 import { Card, CardBody } from "../components/Card";
+import CalendarComp from "../components/Calendar"
 
 
 class Schedule extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Schedule</h1>
-            </div>
+            <Container fluid>
+                <div>
+                    <h1 id="scheduleTitle">Schedule</h1>
+                </div>
+                <Row>
+                    <CalendarComp></CalendarComp>
+                </Row>
+            </Container>
         )
     }
 }

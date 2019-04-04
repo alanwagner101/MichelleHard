@@ -1,6 +1,10 @@
 body {
   font-family: 'Cormorant Garamond', serif;
 }
+#calendar {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 #mainCard {
   height: 90vh;
@@ -18,6 +22,10 @@ body {
   text-align: center;
   padding-top: 20vh;
   text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
+}
+#scheduleTitle {
+  font-size: 60px;
+  text-align: center;
 }
 
 #title {

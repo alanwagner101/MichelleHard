@@ -52,6 +52,11 @@ class Main extends Component {
                     </Col>
                 </Row>
                 <Row>
+                    <Col size={"md-12"}>
+                        <img id="divider2" src="./images/divider2.jpg" alt="./images/divider1.png" />
+                    </Col>
+                </Row>
+                <Row>
                     <Col size={"md-3"}>
                     </Col>
                     <Col size={"md-6"}>
