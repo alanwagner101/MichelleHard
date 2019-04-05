@@ -85,3 +85,15 @@ body {
 .infoWords {
   font-weight: bold;
 }
+
+#loginCard {
+  text-align: center;
+  margin-top: 20vh;
+  margin-bottom: 25vh;
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#adminLoginForm {
+  text-align: center;
+  margin: auto;
+}

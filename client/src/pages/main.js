@@ -29,13 +29,13 @@ class Main extends Component {
                                             <Col size={"md-3"}>
                                             </Col>
                                             <Col size={"md-2"}>
-                                                <button className="titleButtons"><h5 className="infoWords">Event Schedule</h5></button>
+                                                <a href="/schedule"><button className="titleButtons"><h5 className="infoWords">Event Schedule</h5></button></a>
                                             </Col>
                                             <Col size={"md-2"}>
-                                                <button className="titleButtons"><h5 className="infoWords">Shop Now</h5></button>
+                                                <a href="/shop"><button className="titleButtons"><h5 className="infoWords">Shop Now</h5></button></a>
                                             </Col>
                                             <Col size={"md-2"}>
-                                                <button className="titleButtons"><h5 className="infoWords">About Us</h5></button>
+                                                <a href="/about"><button className="titleButtons"><h5 className="infoWords">About Us</h5></button></a>
                                             </Col>
                                             <Col size={"md-3"}>
                                             </Col>
@@ -49,6 +49,16 @@ class Main extends Component {
                 <Row>
                     <Col size={"md-12"}>
                         <img id="divider2" src="./images/divider2.jpg" alt="./images/divider1.png" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size={"md-3"}>
+                    </Col>
+                    <Col size={"md-6"}>
+                        <Card id="featuresCard">
+                        </Card>
+                    </Col>
+                    <Col size={"md-3"}>
                     </Col>
                 </Row>
                 <Row>

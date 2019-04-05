@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Main from "./pages/main";
 import About from "./pages/aboutUs";
 import Schedule from "./pages/Schedule";
+import Login from "./pages/login";
+import Admin from "./pages/admin";
 import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
@@ -20,6 +22,8 @@ class App extends Component {
             <Route exact path="/" component={Main} />
             <Route exact path="/about" component={About} />
             <Route exact path="/schedule" component={Schedule} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/admin" component={Admin} />
             <Route component={NoMatch} />
           </Switch>
           <Footer lock={this.lock}/>
