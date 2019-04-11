@@ -97,3 +97,21 @@ body {
   text-align: center;
   margin: auto;
 }
+
+#adminCard {
+  text-align: center;
+  width: 100%;
+  border: none;
+  margin-top: 33vh;
+  margin-bottom: 33vh;
+}
+
+.adminButtons {
+  width: 100%;
+  box-shadow: 1px 1px 10px #000000;
+  transition: all 0.5s ease-in-out;
+}
+
+.adminButtons:hover {
+  box-shadow: 1px 1px 10px #7e7e7e;
+}

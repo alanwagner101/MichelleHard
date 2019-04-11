@@ -6,5 +6,8 @@ export default {
     },
     saveAdmin: function(adminData) {
         return axios.post("http://localhost:3001/api/admin", adminData)
+    },
+    deleteAdmin: function(id) {
+        return axios.delete("http://localhost:3001/api/admin/" + id)
     }
 }

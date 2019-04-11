@@ -8,7 +8,9 @@ import About from "./pages/aboutUs";
 import Schedule from "./pages/Schedule";
 import Login from "./pages/login";
 import Admin from "./pages/admin";
+import newUserInfo from "./pages/newUserInfo";
 import NoMatch from "./pages/NoMatch";
+import NewUserInfo from './pages/newUserInfo';
 
 class App extends Component {
 
@@ -24,6 +26,7 @@ class App extends Component {
             <Route exact path="/schedule" component={Schedule} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/admin" component={Admin} />
+            <Route exact path="/newuserinfo" component={NewUserInfo} />
             <Route component={NoMatch} />
           </Switch>
           <Footer lock={this.lock}/>

@@ -1,3 +1,4 @@
 module.exports = {
-    Admin: require("./admin.js")
+    Admin: require("./admin.js"),
+    Events: require("./events.js")
   };
