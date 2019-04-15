@@ -9,6 +9,6 @@ const eventsSchema = new Schema({
   allDay: {type: Boolean, require: true}
 });
 
-const Events = mongoose.model("Events", eventsSchema);
+const Events = mongoose.model("Schedule", eventsSchema);
 
 module.exports = Events;

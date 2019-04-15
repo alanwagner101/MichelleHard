@@ -9,5 +9,14 @@ export default {
     },
     deleteAdmin: function(id) {
         return axios.delete("http://localhost:3001/api/admin/" + id)
+    },
+    getEvent: function() {
+        return axios.get("http://localhost:3001/api/schedule")
+    },
+    saveEvent: function(eventData) {
+        return axios.post("http://localhost:3001/api/schedule", eventData)
+    },
+    deleteEvent: function(id) {
+        return axios.delete("http://localhost:3001/api/schedule/" + id)
     }
 }

@@ -4,6 +4,6 @@ const eventsRoutes = require("./events")
 
 // Events routes
 router.use("/admin", userRoutes);
-router.use("/events", eventsRoutes);
+router.use("/schedule", eventsRoutes);
 
 module.exports = router;

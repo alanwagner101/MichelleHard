@@ -115,3 +115,76 @@ body {
 .adminButtons:hover {
   box-shadow: 1px 1px 10px #7e7e7e;
 }
+
+.eventCreatorCard {
+  text-align: center;
+  margin: 20px;
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#eventCreatorForm {
+  width: 100%;
+  text-align: center;
+}
+
+#eventTitle {
+  width: 100%;
+  /* margin-left: 15%; */
+}
+
+#eventTypes {
+  width: 100%;
+  /* margin-left: 15%; */
+}
+
+#eventDate {
+  width: 100%;
+  margin-top: 20px;
+  /* margin-left: 15%; */
+  margin-bottom: 20px;
+}
+
+.eventList {
+  margin: 20px;
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#blue {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  display: block;
+  float: right;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+#blueWords {
+  margin-top: 20px;
+  margin-left: 5px;
+  display: block;
+  float: right;
+}
+
+#red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: block;
+  float: right;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+#redWords {
+  margin-top: 20px;
+  margin-left: 5px;
+  display: block;
+  float: right;
+}
+
+#CallUs {
+  display: block;
+  float: left;
+  margin-top: 20px;
+}
