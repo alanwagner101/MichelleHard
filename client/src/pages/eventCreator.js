@@ -64,7 +64,7 @@ class eventCreator extends Component {
 
         this.setState({ event: result }, () => {
             console.log(this.state);
-            API.saveEvent(this.state.event).then(function () {
+            API.saveEvent(this.state.event).then(() => {
                 console.log("saved!")
                 document.getElementById("eventTitle").value = "";
                 document.getElementById("eventType").value = "";

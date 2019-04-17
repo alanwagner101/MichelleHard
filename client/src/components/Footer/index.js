@@ -13,7 +13,7 @@ function Footer(props) {
                     <Col sizef={"md-12"}>
                         <Card id="footerCard">
                             <CardBody>
-                                <a href="/login"><p>login</p></a>
+                                <a href="/login"><p>admin login</p></a>
                             </CardBody>
                         </Card>
                     </Col>
