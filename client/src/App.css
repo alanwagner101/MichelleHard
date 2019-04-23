@@ -252,5 +252,21 @@ body {
 }
 
 .productListImg {
-  width: 100%;
+  width: 40px;
+  margin: 5px;
+}
+
+table, th, td {
+  border: 3px solid rgba(0, 0, 0, 0.171);
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#productTableHead {
+  background-color: #ececec;
+}
+
+.productTableCell {
+  max-width: 20px;
 }

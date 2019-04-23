@@ -11,6 +11,7 @@ import Admin from "./pages/admin";
 import newUserInfo from "./pages/newUserInfo";
 import eventCreator from "./pages/eventCreator";
 import shopCreator from "./pages/shopCreator";
+import Shop from "./pages/shop";
 import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
             <Route exact path="/newuserinfo" component={newUserInfo} />
             <Route exact path="/eventcreator" component={eventCreator} />
             <Route exact path="/shopcreator" component={shopCreator} />
+            <Route exact path="/shop" component={Shop} />
             <Route component={NoMatch} />
           </Switch>
           <Footer lock={this.lock}/>

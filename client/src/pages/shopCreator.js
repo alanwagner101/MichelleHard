@@ -4,10 +4,9 @@ import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import { List } from "../components/List";
 import { Input, FormBtn } from "../components/Form";
 import { Card, CardBody } from "../components/Card";
-import CalendarComp from "../components/Calendar"
 
 class shopCreator extends Component {
 
@@ -16,16 +15,45 @@ class shopCreator extends Component {
         products: []
     }
 
-    componentDidMount = () => {
+    updateProducts = () => {
         API.getProduct().then(res => {
-            this.setState({ products: res.data })
+            let result = [];
+            result = res.data;
+            let temp = [];
+            let endResult = [];
+            for (let i = 0; i < result.length; i++) {
+                let isSame;
+                isSame = false
+                for (let j = 0; j < temp.length; j++) {
+                    if (result[i].prodType === temp[j]) {
+                        isSame = true
+                    }
+                }
+                if (isSame === false) {
+                    temp.push(result[i].prodType);
+                }
+            }
+            for (let k = 0; k < temp.length; k++) {
+                temp[k] = temp[k].toUpperCase()
+            }
+            temp.sort();
+            for (let l = 0; l < temp.length; l++) {
+                for ( let m = 0; m < result.length; m++) {
+                    if(result[m].prodType.toUpperCase() === temp[l]) {
+                        endResult.push(result[m]);
+                    }
+                }
+            }
+            this.setState({ products: endResult });
         })
     }
 
+    componentDidMount = () => {
+        this.updateProducts();
+    }
+
     componentDidUpdate = () => {
-        API.getProduct().then(res => {
-            this.setState({ products: res.data })
-        })
+        this.updateProducts();
     }
 
     DeleteButton = event => {
@@ -77,17 +105,13 @@ class shopCreator extends Component {
                     <Col size={"md-2"}>
 
                     </Col>
-                    <Col size={"md-4"}>
+                    <Col size={"md-8"}>
                         <Card className={"productCreatorCard"}>
                             <CardBody>
                                 <h3>Create a New Product</h3>
                                 <form id="productCreatorForm" action="/action_page.php" method="get">
-                                    <input list="productType" name="types" placeholder={"Type of Product"} id="productTypes" />
-                                    <datalist id="productType" >
-                                        <option value="Class" />
-                                        <option value="product" />
-                                    </datalist>
                                     <Input type={"text"} placeholder={"Name of Product"} id="productTitle"></Input>
+                                    <Input type={"text"} placeholder={"Type of Product"} id="productTypes"></Input>
                                     <Input type={"text"} placeholder={"Product Price"} id="productPrice"></Input>
                                     <Input type={"text"} placeholder={"Product Description"} id="productDescription"></Input>
                                     <Input type={"text"} placeholder={"Product Image URL"} id="productImg"></Input>
@@ -96,30 +120,42 @@ class shopCreator extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col size={"md-4"}>
+                    <Col size={"md-2"}>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size={"md-2"}>
+
+                    </Col>
+                    <Col size={"md-8"}>
                         <Card className={"productList"}>
                             {this.state.products.length ? (
                                 <List id={"productListOverflow"}>
-                                    {this.state.products.map(product => (
-                                        <ListItem key={product._id} className={"mt-2"}>
-                                            <Card className="productItem">
-                                                <CardBody>
-                                                    <Row>
-                                                        <Col size={"md-10"}>
-                                                            <p>{"Name of Product: " + product.title}</p>
-                                                            <p>{"Type of Product: " + product.prodType}</p>
-                                                            <p>{"Price: " + product.price}</p>
-                                                            <p>{"Description: " + product.description}</p>
-                                                            <img className={"productListImg"} src={product.img} alt={product.img} />
-                                                        </Col>
-                                                        <Col size={"md-2"}>
-                                                            <DeleteBtn onClick={this.DeleteButton} id={product._id}></DeleteBtn>
-                                                        </Col>
-                                                    </Row>
-                                                </CardBody>
-                                            </Card>
-                                        </ListItem>
-                                    ))}
+                                    <table id="productTable">
+                                        <thead id="productTableHead">
+                                            <tr className={"productTableCell"}>
+                                                <th className={"productTableCell"}>Name of Product</th>
+                                                <th className={"productTableCell"}>Type of Product</th>
+                                                <th className={"productTableCell"}>Price</th>
+                                                <th className={"productTableCell"}>Description</th>
+                                                <th className={"productTableCell"}>Image</th>
+                                                <th className={"productTableCell"}>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        {this.state.products.map(product => (
+                                            <tbody key={product._id}>
+                                                <tr className={"productTableCell"}>
+                                                    <td className={"productTableCell"}>{product.title}</td>
+                                                    <td className={"productTableCell"}>{product.prodType}</td>
+                                                    <td className={"productTableCell"}>{"$" + product.price}</td>
+                                                    <td className={"productTableCell"}>{product.description}</td>
+                                                    <td className={"productTableCell"}><img className={"productListImg"} src={product.img} alt={product.img} /></td>
+                                                    <td className={"productTableCell"}><DeleteBtn onClick={this.DeleteButton} id={product._id}></DeleteBtn></td>
+                                                </tr>
+                                            </tbody>
+                                        ))}
+                                    </table>
                                 </List>
                             ) : (
                                     <h1 id="noResults">No Results to Display</h1>

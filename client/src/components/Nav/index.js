@@ -20,6 +20,9 @@ function Nav(props) {
                         <a className="nav-link" href="/schedule">Schedule</a>
                     </li>
                     <li className="nav-item">
+                        <a className="nav-link" href="/shop">Shop</a>
+                    </li>
+                    <li className="nav-item">
                         <a className="nav-link" href="/about">About Us</a>
                     </li>
                 </ul>
