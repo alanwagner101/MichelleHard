@@ -91,7 +91,7 @@ class Shop extends Component {
 
                     </Col>
                     <Col size={"md-3"}>
-                        <Card>
+                        <Card id="productTypeDisplayCard">
                             <CardBody>
                                 <h3 id="sideBarTypes">Product Types</h3>
                                 {this.state.prodType.length ? (
@@ -110,9 +110,9 @@ class Shop extends Component {
                         </Card>
                     </Col>
                     <Col size={"md-7"}>
-                        <Card>
+                        <Card id="productDisplayCard">
                             <CardBody>
-                                <Container fluid>
+                                <Container>
                                     <Row>
                                         <Col size={"md-12"}>
                                             <h2 className="productDisplayTitle">{this.state.displayTitle}</h2>
@@ -122,9 +122,12 @@ class Shop extends Component {
                                         <Row>
                                             {this.state.displayItems.map(item => (
                                                 <Col size={"md-4"}>
-                                                    <Card>
+                                                    <Card className={"itemCards"}>
                                                         <CardBody>
-                                                            <h5>{item.title}</h5>
+                                                            <h4 className="itemTitle">{item.title}</h4>
+                                                            <img className={"itemPics"} src={item.img} alt={item.img} />
+                                                            <p>{"$" + item.price}</p>
+                                                            <p>{item.description}</p>
                                                         </CardBody>
                                                     </Card>
                                                 </Col>
@@ -145,6 +148,7 @@ class Shop extends Component {
 
                     </Col>
                 </Row>
+                <br></br>
                 <Row>
                     <Col size={"md-12"}>
                         <Card id="storeFrontWords">

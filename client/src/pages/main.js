@@ -56,6 +56,23 @@ class Main extends Component {
                     </Col>
                     <Col size={"md-6"}>
                         <Card id="featuresCard">
+                            <h2 id="featureTitle">Featured at Michele's</h2>
+                            <Row>
+                                <Col size={"md-7"}>
+                                    <h6>Janome Sewing Machines</h6>
+                                    <img id="Janome" src={"https://www.janome.com/siteassets/products/machines/embroidery/mc15000-quilt-maker/mc15k_qm-right.jpg?"} alt={"https://www.janome.com/siteassets/products/machines/embroidery/mc15000-quilt-maker/mc15k_qm-right.jpg?"} />
+                                </Col>
+                                <Col size={"md-5"}>
+                                    <h6>Quilting Fabrics</h6>
+                                    <img id="quiltingFabrics" src={"https://images.fabric.com/images/693/693/0580763.jpg"} alt={"https://images.fabric.com/images/693/693/0580763.jpg"} />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col size={"md-12"}>
+                                <h6>Grace Quilting Company 21 inch computerized machine</h6>
+                                <img id="graceLongArm" src={"https://www.graceframe.com/frontend/images/qnique21/qnique21-10foot-right-big.png"} alt={"https://www.graceframe.com/frontend/images/qnique21/qnique21-10foot-right-big.png"} />
+                                </Col>
+                            </Row>
                         </Card>
                     </Col>
                     <Col size={"md-3"}>

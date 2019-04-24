@@ -293,3 +293,54 @@ table, th, td {
 .productDisplayTitle {
   text-align: center;
 }
+
+.itemTitle {
+  font-weight: bolder;
+}
+
+.itemPics {
+  width: 100%;
+}
+
+.itemCards {
+  height: 450px;
+  box-shadow: 1px 1px 10px #000000;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#productDisplayCard {
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#productTypeDisplayCard {
+  box-shadow: 1px 1px 10px #000000;
+}
+
+#Janome {
+  width: 100%;
+}
+
+#quiltingFabrics {
+  width: 100%;
+}
+
+#graceLongArm {
+  width: 100%;
+}
+
+#featuresCard {
+  border: none;
+  text-align: center;
+}
+
+#featureTitle {
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+#aboutCard {
+  text-align: center;
+  margin: 20px;
+  box-shadow: 1px 1px 10px #000000;
+}
