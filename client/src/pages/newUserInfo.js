@@ -30,23 +30,40 @@ class NewUserInfo extends Component {
     adminSubmit = event => {
         event.preventDefault();
 
-        API.deleteAdmin(this.state.current[0].id)
-        .then(() => console.log("old one gone"))
-        .catch(err => console.log(err))
-
-        let username = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
-        this.setState({username: username, password: password}, () => {
-            console.log(this.state);
-            API.saveAdmin(this.state).then(function() {
-                console.log("success");
-                alert("new username and password saved");
-            }).catch(function(err) {
-                console.log(err);
-            })
-            document.getElementById("username").value = "";
-            document.getElementById("password").value = "";
-        });
+        if(this.state.current === "") {
+            console.log("first user")
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            this.setState({username: username, password: password}, () => {
+                console.log(this.state);
+                API.saveAdmin(this.state).then(function() {
+                    console.log("success");
+                    alert("new username and password saved");
+                }).catch(function(err) {
+                    console.log(err);
+                })
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+            });
+        } else {
+            API.deleteAdmin(this.state.current[0].id)
+            .then(() => console.log("old one gone"))
+            .catch(err => console.log(err))
+    
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            this.setState({username: username, password: password}, () => {
+                console.log(this.state);
+                API.saveAdmin(this.state).then(function() {
+                    console.log("success");
+                    alert("new username and password saved");
+                }).catch(function(err) {
+                    console.log(err);
+                })
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+            });
+        }
 
     };
 
