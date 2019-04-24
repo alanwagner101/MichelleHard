@@ -270,3 +270,26 @@ table, th, td {
 .productTableCell {
   max-width: 20px;
 }
+
+.prodTypeButtons {
+  color: black;
+  padding-top: 5px;
+  width: 90%;
+  box-shadow: 1px 1px 15px #f1eff1;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.prodTypeButtons:hover {
+  box-shadow: 1px 1px 15px #020202;
+}
+
+#sideBarTypes {
+  text-align: center;
+}
+
+.productDisplayTitle {
+  text-align: center;
+}
