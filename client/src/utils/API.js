@@ -20,7 +20,7 @@ export default {
         return axios.delete("https://morning-stream-59911.herokuapp.com/api/schedule/" + id)
     },
     getProdType: function() {
-        return axios.get("http://localhosts:3001/api/prodtype")
+        return axios.get("https://morning-stream-59911.herokuapp.com/api/prodtype")
     },
     saveProdType: function(prodTypeData) {
         return axios.post("https://morning-stream-59911.herokuapp.com/api/prodtype", prodTypeData)

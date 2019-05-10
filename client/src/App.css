@@ -157,18 +157,40 @@ body {
   font-weight: bolder;
 }
 
+.colorBoxes {
+  width: 33%;
+  display: block;
+  float: right;
+  padding: 10px;
+  padding-right: 10%;
+  border: none;
+}
+
 #blue {
   width: 20px;
   height: 20px;
   background-color: blue;
   display: block;
-  float: right;
+  float: left;
   margin: 5px;
-  margin-top: 20px;
 }
 
 #blueWords {
-  margin-top: 20px;
+  margin-left: 5px;
+  display: block;
+  float: right;
+}
+
+#green {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  display: block;
+  float: left;
+  margin: 5px;
+}
+
+#greenWords {
   margin-left: 5px;
   display: block;
   float: right;
@@ -179,21 +201,18 @@ body {
   height: 20px;
   background-color: red;
   display: block;
-  float: right;
+  float: left;
   margin: 5px;
-  margin-top: 20px;
 }
 
 #redWords {
-  margin-top: 20px;
   margin-left: 5px;
   display: block;
   float: right;
 }
 
 #CallUs {
-  display: block;
-  float: left;
+  text-align: center;
   margin-top: 20px;
 }
 
@@ -341,6 +360,88 @@ table, th, td {
 
 #aboutCard {
   text-align: center;
-  margin: 20px;
+  margin: 45px;
   box-shadow: 1px 1px 10px #000000;
+}
+
+@media only screen and (max-width: 1200px) {
+  h5 {
+    font-size: 15px;
+  }
+  .titleButtons {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 955px) {
+  h6 {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 11px;
+  }
+  #titleHeader {
+    font-size: 50px;
+  }
+  #title {
+    font-size: 75px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .itemCards {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .itemCards {
+    height: 450px;
+  }
+  .itemPics {
+    width: 65%;
+  }
+  .itemTitle {
+    font-size: 20px;
+  }
+  #productTypeDisplayCard {
+    margin-bottom: 15px;
+  }
+  .productDisplayTitle {
+    font-size: 30px;
+  }
+  #sideBarTypes {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 641px) {
+ .fc-title {
+   font-size: 10px;
+ }
+}
+
+@media only screen and (max-width: 500px) {
+
+  #divider1 {
+    background-color: #00000000;
+    width: 60%;
+    margin-left: 15px;
+  }
+  
+  #divider2 {
+    width: 80%;
+    margin-left: 10vw;
+    margin-top: 15px;
+  }
+  .itemPics {
+    width: 100%;
+  }
+  #aboutUsTitle {
+    font-size: 13px;
+  }
+
 }

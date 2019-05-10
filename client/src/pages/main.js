@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, FormBtn } from "../components/Form";
 import { Card, CardBody } from "../components/Card";
+import InfoWords from "../components/InfoWords";
 
 
 class Main extends Component {
@@ -93,34 +94,7 @@ class Main extends Component {
                     <Col size={"md-3"}>
                     </Col>
                 </Row>
-                <Row>
-                    <Col size={"md-12"}>
-                        <Card id="storeFrontWords">
-                            <CardBody>
-                                <Container fluid>
-                                    <Row>
-                                        <Col size={"md-3"}>
-                                        </Col>
-                                        <Col size={"md-2"}>
-                                            <h2 className="infoWords">Location</h2>
-                                            <h5 className="infoWords">120 N Main St, Blue Earth, MN 56013</h5>
-                                        </Col>
-                                        <Col size={"md-2"}>
-                                            <h2 className="infoWords">Phone Number</h2>
-                                            <h5 className="infoWords">507-526-3295</h5>
-                                        </Col>
-                                        <Col size={"md-2"}>
-                                            <h2 className="infoWords">Email</h2>
-                                            <h5 className="infoWords">michelesewvac@bevcomm.net</h5>
-                                        </Col>
-                                        <Col size={"md-3"}>
-                                        </Col>
-                                    </Row>
-                                </Container>
-                            </CardBody>
-                        </Card>
-                    </Col>
-                </Row>
+                <InfoWords></InfoWords>
             </Container>
         )
     }

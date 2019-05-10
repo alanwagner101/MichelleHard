@@ -56,6 +56,8 @@ class eventCreator extends Component {
         result.textColor = "white";
         if (type === "Class") {
             result.backgroundColor = "red";
+        } else if (type === "Shop Hop") {
+            result.backgroundColor = "green";
         } else {
             result.backgroundColor = "blue";
         }
@@ -90,6 +92,7 @@ class eventCreator extends Component {
                                     <datalist id="eventType" >
                                         <option value="Class" />
                                         <option value="Event" />
+                                        <option value="Shop Hop" />
                                     </datalist>
                                     <input type="date" name="eventDate" id="eventDate" />
                                     <FormBtn onClick={this.FormSubmit}>Submit</FormBtn>
