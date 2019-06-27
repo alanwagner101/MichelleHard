@@ -33,9 +33,9 @@ function InfoWords() {
                                 </Col>
                                 <Col size={"md-4"}>
                                     <h2 className="infoWords">Store Hours</h2>
-                                    <h6 className="infoWords">Mon-Wed 9am - 5pm</h6>
+                                    <h6 className="infoWords">Mon-Wed 9am - 5:30pm</h6>
                                     <h6 className="infoWords">Thu 9am - 7pm</h6>
-                                    <h6 className="infoWords">Fri 9am - 5pm</h6>
+                                    <h6 className="infoWords">Fri 9am - 5:30pm</h6>
                                     <h6 className="infoWords">Sat 9am - 2pm</h6>
                                 </Col>
                                 <Col size={"md-4"}>
